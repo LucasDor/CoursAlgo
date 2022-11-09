@@ -104,11 +104,28 @@ public class Pile
     }
 
     // retourne la pile (méthode de haut niveau)
-    public void inverser()
+    public Pile videinto()
     {
-        // to do si vous avez envie
-        // soit on l'écrit uniquement avec les méthodes de base : assez facile et peu efficace
-        // on on retourne tout le chaînage : efficace et délicat
+        Pile P = new Pile();
+        Cell current = first;
+        while(current != null)
+        {
+            P.empiler(current.val);
+            current = current.next;
+        }
+        vidange();
+        return P;
+    }
+
+    public Pile inverser()
+    {
+        Pile P1 = new Pile();
+        P1 = videinto();
+        Pile P2 = new Pile();
+        P2 = P1.videinto();
+        return P2.videinto();
+
+        // Inverse les valeur d'une pile
     }
     
     // inserer à une position donnée : méthode incorrecte pour une pile dont on ne manipule

@@ -20,7 +20,7 @@ public class Exercices1et2
         pile.depiler();
         System.out.println("sommet : " + pile.sommet());
         pile.affiche();
-        //pile.inverser();
+        pile = pile.inverser();
         pile.affiche();
         pile.vidange();
 
@@ -28,7 +28,7 @@ public class Exercices1et2
         pile.empiler(50);
         pile.empiler(30);
         pile.empiler(20);
-        // pile.inserer(40, 2);
+        //inserer(40, 2);
         // pile.inserer(60, 4);
         // pile.inserer(10, 0);
         pile.affiche();     // normalement (10,20,30,40,50,60)    avec le sommet à gauche et le fond à droite
