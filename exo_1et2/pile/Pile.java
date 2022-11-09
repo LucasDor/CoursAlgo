@@ -41,11 +41,10 @@ public class Pile
 
     // dépiler : supprimer le sommet de pile (méthode de base)
     // la pile ne doit pas être vide
-    //TODO
 
     public void depiler()
     {
-        if(estvide())
+        if(!estvide())
         {
             first = first.next;
         }
@@ -55,11 +54,11 @@ public class Pile
     // l'élément N'est PAS dépilé
     // la pile ne doit pas être vide
 
-    public Cell sommet()
+    public int sommet()
     {
         if(!estvide())
         {
-            return first;
+            return first.val;
         }
 
         return 0;
@@ -74,21 +73,35 @@ public class Pile
     // affiche (méthode de haut niveau, mais compliquée et peu efficace si on n'utilise que les méthodes de base)
     // Aussi parcourt-on les cellules de la liste en les affichant au fur et à mesure
     // L'affichage doit être vertical avec le sommet est en haut de l'affichage
-    //TODO
 
     public void affiche()
     {
         Cell current = first;
-        while(!estvide())
+        do
         {
-            System.out.println(current);
+            System.out.println(current.val);
             current = current.next;
-        }
+        }while(!(current == null));
 
     }
 
+    public void raperrecaffiche()
+    {
+        recaffiche(first);
+    }
     // même méthode mais en récursif
-    //TODO
+    private void recaffiche(Cell ce)
+    {
+        if(ce.next == null)
+        {
+            System.out.println(ce.val);
+        }
+        else
+        {
+            System.out.println(ce.val);
+            recaffiche(ce.next);
+        }
+    }
 
     // retourne la pile (méthode de haut niveau)
     public void inverser()

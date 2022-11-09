@@ -14,11 +14,13 @@ public class Exercices1et2
         pile.empiler(12);
         pile.empiler(3);
         pile.empiler(15);
-        pile.affiche();
+        //pile.affiche();
+        System.out.println("en rec");
+        pile.raperrecaffiche();
         pile.depiler();
         System.out.println("sommet : " + pile.sommet());
         pile.affiche();
-        pile.inverser();
+        //pile.inverser();
         pile.affiche();
         pile.vidange();
 
@@ -29,7 +31,7 @@ public class Exercices1et2
         // pile.inserer(40, 2);
         // pile.inserer(60, 4);
         // pile.inserer(10, 0);
-        // pile.afficher();     // normalement (10,20,30,40,50,60)    avec le sommet à gauche et le fond à droite
+        pile.affiche();     // normalement (10,20,30,40,50,60)    avec le sommet à gauche et le fond à droite
         
     }
 }
