@@ -127,6 +127,15 @@ public class Pile
 
         // Inverse les valeur d'une pile
     }
+
+    public void insert(int val,int index)
+    {
+        Pile P1 = new Pile();
+        for(int i = 0; i <= index; i ++)
+        {
+            
+        }
+    }
     
     // inserer à une position donnée : méthode incorrecte pour une pile dont on ne manipule
     // que le sommet théoriquement ; juste pour faire des manipulations de pointeurs
