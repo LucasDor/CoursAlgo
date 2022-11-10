@@ -28,9 +28,10 @@ public class Exercices1et2
         pile.empiler(50);
         pile.empiler(30);
         pile.empiler(20);
-        //inserer(40, 2);
-        // pile.inserer(60, 4);
-        // pile.inserer(10, 0);
+        System.out.println("Insertion");
+        pile.inserer(40, 2);
+        pile.inserer(60, 4);
+        pile.inserer(10, 0);
         pile.affiche();     // normalement (10,20,30,40,50,60)    avec le sommet à gauche et le fond à droite
         
     }

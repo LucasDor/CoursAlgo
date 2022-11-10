@@ -128,12 +128,23 @@ public class Pile
         // Inverse les valeur d'une pile
     }
 
-    public void insert(int val,int index)
+    public void inserer(int value,int index)
     {
         Pile P1 = new Pile();
-        for(int i = 0; i <= index; i ++)
+        
+        for(int i = 0; i < index; i ++)
         {
-            
+            if(first != null)
+            {
+                P1.empiler(first.val);
+                depiler();
+            }
+        }
+        empiler(value);
+        while(!P1.estvide())
+        {
+            //empiler(P1.first);
+            P1.depiler();
         }
     }
     
