@@ -24,13 +24,20 @@ public class Exercices1et2
         pile.affiche();
         pile.vidange();
 
+        System.out.println("Vidange");
         // test de inserer;
+        System.out.println("empile 50");
         pile.empiler(50);
+        System.out.println("empile 30");
         pile.empiler(30);
+        System.out.println("empile 20");
         pile.empiler(20);
         System.out.println("Insertion");
+        System.out.println("40");
         pile.inserer(40, 2);
+        System.out.println("empile 60");
         pile.inserer(60, 4);
+        System.out.println("empile 10");
         pile.inserer(10, 0);
         pile.affiche();     // normalement (10,20,30,40,50,60)    avec le sommet à gauche et le fond à droite
         

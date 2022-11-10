@@ -1,5 +1,7 @@
 package code_fourni.exo_4;
 
+import code_fourni.exo_5_et_plus.Pile;
+
 /**
  * @author subrenat
  */
@@ -129,8 +131,20 @@ public class PileChar
     // indique si une expression est correctement parenthésée
     public static boolean parentheses(String s)
     {
-        //TODO
-        return false;
+        Pile Parenthe = new Pile();
+        for(int i = 0;i < s.length();i++ )
+        {
+            char c = s.charAt(i);
+            if(c == '(' || c == '[')
+            {
+                Parenthe.empiler(i);
+            }
+            else if(c == ')' || c == ']')
+            {
+                
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args)

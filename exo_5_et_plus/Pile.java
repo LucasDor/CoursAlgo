@@ -141,9 +141,26 @@ public class Pile
         A.empiler(2);
         A.empiler(7);
 
-        A.afficher();
+        A.afficher();       
 
-        //TODO code pour séparer les nombres pairs et impairs
+        while(!A.isVide())
+        {
+            C.empiler(A.sommet());
+            A.depiler();
+        }
+        while(!C.isVide())
+        {
+            int v = C.sommet();
+            if(v %2 != 0)
+            {
+                A.empiler(v);
+            }
+            else
+            {
+                B.empiler(v);
+            }
+            C.depiler();
+        }
 
         A.afficher();     // normalement (7,3,1)    avec le sommet à gauche et le fond à droite
         B.afficher();     // normalement (2,4,6,8)  même remarrque
@@ -153,6 +170,9 @@ public class Pile
     // exercice 6 : calcule la valeur d'une expression postfixe (supposée bien formée)
     public static int postfixe(String s)
     {
+        Pile Chiffre = new Pile();
+
+        
         //TODO
         //  - il faut utiliser une pile d'entiers
         //  - char c = s.charAt(2);  // récupère le 3me caractère de la chaine
